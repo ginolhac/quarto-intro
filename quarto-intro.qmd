@@ -1,0 +1,449 @@
+---
+title: "Quarto introduction"
+subtitle: "Literate programming"
+date: today
+date-format: "dddd, [the] D[<sup style='font-size:65%;font-style:italic;'>th</sup>] [of] MMMM, YYYY"
+institute: "University of Luxembourg"
+author: "Aurélien Ginolhac, DLSM"
+image: img/lit_prog_quarto.png
+format:
+  unilu-theme-revealjs:
+    logo_url: https://ginolhac.github.io/quarto-intro/
+revealjs-plugins:
+  - pointer
+from: markdown+emoji
+title-slide-attributes: 
+  data-background-image: img/lit_prog_quarto.png
+  data-background-position: "50% 10%"
+  data-background-size: "280px"
+execute: 
+  echo: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+```
+
+
+## This seminar
+
+
+:::{.callout-tip icon=false}
+## You will learn to:
+
+
+- What is literate programming
+- What is **Quarto**
+- Learn about the different possibilities:
+    + Documents and reports
+    + Presentations (this one is an example)
+    + Websites and blogs
+    + Dashboards
+    + Books
+    + Manuscripts
+- Render to the output format you want
+
+:::
+
+
+
+## 
+
+
+::: {.huge}
+>**Literate programming** is the practice of [mixing]{.green} code and descriptive writing in order to execute and explain a [data analysis]{.green} **simultaneously in the same document**.
+
+
+— _William Landau_
+:::
+
+
+::: {.fragment}
+Pure programming is almost never happening, we want reports/websites where content and formatting are disconnected 
+:::
+
+::: {.footer}
+Source: [`{targets}` user manual](https://books.ropensci.org/targets/literate-programming.html)
+:::
+
+
+
+## Rmarkdown
+
+Predecessor of Quarto. 
+
+Version 1 in 2016, the idea was to have text and code in one document, execute {{< fa brands r-project >}} code and let the final **markdown** converted to different formats by [`pandoc`](https://pandoc.org/).
+
+
+:::: {.columns .fragment}
+::: {.column width="70%"}
+
+![](img/markdown_hedgehog.png){fig-align="center"}
+:::
+::: {.column width="30%"}
+**Jupyter notebook** were also exploring the same concept.
+
+:::
+::::
+
+
+::: footer
+Credit: Artwork by [Allison Horst](https://github.com/allisonhorst)
+:::
+
+## Markdown
+
+- **Lightweight** markup language with a simple syntax
+
+::::: {.columns}
+:::: {.column width="45%"}
+
+### HTML 
+
+``` html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>This is a heading</h1>
+
+<p>This is some text in a <b>paragraph</b>.</p>
+
+<h2>This is a second level heading</h2>
+
+<ul>
+<li><a href="http://exa.com"><code>site</code></a>
+<li><img src="path/to/image.jpg">
+</ul>
+</body>
+</html>
+```
+
+::::
+:::: {.column width="50%" .fragment}
+
+### MD equivalent
+
+``` markdown
+# This is a heading
+
+This is some text in a **paragraph**
+
+## This is a second level heading
+
+- [`site`](http://exa.com)
+- ![](path/to/image.jpg)
+```
+
+::::
+:::::
+
+::: {.footer}
+See [author markdown guide](https://quarto.org/docs/authoring/markdown-basics.html#text-formatting)
+:::
+
+## Quarto 
+
+Extended Rmarkdown. Languages and IDE agnostic
+
+:::: {.columns}
+::: {.column width="20%"}
+![](img/lit_prog_quarto_ide.png)
+:::
+::: {.column width="80%"}
+![](img/lit_prog_horst_quarto_schematic.png)
+:::
+
+::::
+
+## Why use **Quarto** ?
+
+- Write detailed analyses that render to beautiful reports
+- Ensure reproducibility
+- Mix programming languages (passing along variables)
+- Excellent [documentation](https://quarto.org/docs)
+- Export a single (`.qmd`) document to various formats (PDF, HTML...)
+- Many [extensions](https://m.canouil.dev/quarto-extensions/extensions.html)
+- Text file that can (should) be managed by a version control system (like [git](https://git-scm.com/))
+
+
+
+## Including code to execute
+
+[![](img/lit_prog_horst_qmd_render_schema.png)]{fig-align="center"}
+
+## Computation
+
+:::::{.columns}
+::::{.column width="33%"}
+
+- In a fresh and clean session
+- **Chunks** are **evaluated**
+- Sequentially from top to bottom
+
+::::
+
+::::{.column width="33%"}
+
+### Example for `knitr`
+
+- Extracts {{< fa brands r-project >}} chunks
+- Interpret/Run them
+- Formats results as markdown
+- Reinject in the document (MD)
+
+::::
+
+::::{.column width="33%"}
+### [Pandoc]((http://pandoc.org/))
+- Converts markdown to the desired document 
+  * PDF
+  * HTML
+  * Word
+  * EPUB
+  * ...
+::::
+:::::
+
+## Quarto document: Structure
+
+
+::::: {.columns}
+:::: {.column width="45%"}
+
+![](img/lit_prog_struct.svg)
+
+::::
+
+::::{.column width="45%"}
+
+:::{.callout-important icon=false}
+## YAML header
+- Document common variables:
+  + title, date, author, ...
+- Define **format** and its specific options
+- Use <kbd>TAB</kbd> for autocompletion
+:::
+
+:::{.callout-note icon=false}
+## Free text in Markdown
+
+- Markdown syntax to write your descriptions, remarks
+- Literate programming
+:::
+
+
+:::{.callout-tip icon=false}
+## Code chunks
+Code to be interpreted
+
+- `knitr` for {{< fa brands r-project >}}
+- `jupyter` for {{< fa brands python >}}
+- Outputs (tables/plots) are inserted below each
+:::
+
+
+::::
+:::::
+
+
+
+## Popular output formats
+
+
+:::::{.columns}
+::::{.column width="33%"}
+
+### HTML
+
+- Fast rendering
+- No need for extra install
+
+
+::: {.callout-important}
+## Default is NOT standalone
+
+Use format option to obtain a self contained HTML
+
+``` yaml
+---
+format:
+  html:
+    embed-resources: true
+---
+```
+
+:::
+
+::::
+
+::::{.column width="33%" .fragment}
+### PDF
+
+- Single file
+- Requires $\LaTeX$,
+  have a look at the **[TinyTeX](https://yihui.name/tinytex/)** package for minimal install
+  
+:::{.callout-tip}
+## [Typst](https://github.com/typst/typst)
+
+- New [format](https://quarto.org/docs/output-formats/typst.html) for {{< fa file-pdf >}}
+- Fast!
+- No need for $\LaTeX$
+:::
+::::
+
+::::{.column width="33%" .fragment}
+
+### Word (`docx`)
+
+- Widely used
+- Editable
+- **Collaborate** with people not using Quarto
+
+::::
+:::::
+
+
+## Output examples 1/2
+
+:::: {.columns}
+::: {.column width="50%"}
+### HTML
+![](img/literate_prog_html.png)
+
+:::
+::: {.column width="50%"}
+### Word
+
+![](img/literate_prog_docx.png)
+:::
+::::
+
+## Output examples {{< fa file-pdf >}} 2/2 {.scrollable}
+
+:::: {.columns}
+::: {.column width="50%"}
+### Typst
+![](img/literate_prog_pdf.png)
+
+:::
+::: {.column width="50%"}
+### PDF (LaTex)
+
+![](img/literate_prog_typst.png)
+:::
+::::
+
+
+
+## Equations using $\LaTeX$ syntax
+
+::::: {.columns}
+:::: {.column width="45%"}
+:::{.callout-tip icon=false}
+## How to add equations
+
+ * Enclose in `$` for in-line equations
+ * `$a^2+b^2=c^2$` renders as $a^2+b^2=c^2$.
+
+ * Double (`$$`) for separate equations.
+```
+$$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v}) $$
+```
+
+renders as:
+
+$$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
+
+:::
+::::
+
+:::::
+
+
+## Reports
+
+
+:::: {.columns}
+::: {.column width="40%"}
+- Automatic Table of content
+- Here HTML output, but PDF is only one variable modification away
+:::
+::: {.column width="60%"}
+
+![](img/dagmar-report.png){fig-align="center"}
+:::
+::::
+
+
+
+## Websites
+
+:::: {.columns}
+::: {.column width="40%"}
+
+- Extensive use for teaching
+- Building and deployment via Continous Integration {{< fa brands gitlab >}}
+- Automatic listing pages, search engine, navigation bar and smart caching
+- Demo using the [BASV53](https://basv53.uni.lu)
+
+:::
+::: {.column width="60%"}
+![](img/website-basv53.png){fig-align="center"}
+
+:::
+::::
+
+## Dashboards
+
+- Nice alternative to `shiny` apps (using scheduled pipelines)
+- Demo using the [labbook timeline of bioinfo](https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/labbook-dashboard/)
+
+![](img/labbook-dashboard.png){fig-align="center"}
+
+## Manuscripts
+
+## Before we stop
+
+
+:::::{.columns}
+::::{.column width="45%"}
+:::{.callout-tip icon=false}
+## Summary
+
+- What is `Quarto` (`qmd`)
+- Basic syntax of `Markdown`
+- Separate **content** from **rendering**
+- `render` to different output formats
+:::
+
+:::{.callout-tip}
+## Further reading 📚
+
+- [Quarto](https://quarto.org/)
+- [Quarto extensions](https://m.canouil.dev/quarto-extensions/extensions.html)
+- [Quarto cheatsheet](https://rstudio.github.io/cheatsheets/quarto.pdf)
+- [Mine Quarto presentation](https://mine.quarto.pub/hello-quarto/#/quarto-next-generation-r-markdown)
+
+:::
+::::
+
+::::{.column width="45%"}
+:::{.callout-note icon=false}
+## Acknowledgments  🙏 👏
+
+* Mine Cetinkaya-Rundel
+* Xie Yihuie
+* Alison Horst
+* Hadley Wickham
+* Artwork by [Allison Horst](https://twitter.com/allison_horst)
+* Mickael Canouil
+* Jenny Bryan
+:::
+
+[Thank you for your attention!]{.thanks}
+::::
+:::::

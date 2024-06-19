@@ -1,0 +1,69 @@
+services:
+    - name: docker:20.10.12-dind
+      command: ["--registry-mirror", "https://docker-registry.lcsb.uni.lu"]
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+  CI: "gitlab"
+
+stages:
+  - build_image
+  - build_site
+  - deploy
+
+build docker image:
+  stage: build_image
+  image: docker:20.10.12-dind
+  tags:
+    - shared-cache
+  before_script:
+    - docker info
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    - 'docker pull $CI_REGISTRY_IMAGE:latest || true'
+    - docker build --cache-from $CI_REGISTRY_IMAGE:latest --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --tag $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+    - docker push $CI_REGISTRY_IMAGE:latest
+  only:
+    changes:
+      - Dockerfile
+
+build_site:
+  stage: build_site
+  image: $CI_REGISTRY_IMAGE:latest
+  cache:
+    key: $CI_JOB_NAME
+    paths:
+      - _freeze/
+      - _site/
+  artifacts:
+    name: "$CI_JOB_NAME"
+    expire_in: 2 days
+    paths:
+      - _site/
+  before_script:
+    # https://mastodon.social/@eddelbuettel/111693310455494722
+    - |
+      Rscript -e "read.dcf('DESCRIPTION', 'Imports') |> 
+        tools:::.split_dependencies() |> 
+        names() |> 
+        setdiff(tools:::.get_standard_package_names()$base) |> 
+        install.packages()"
+  script:
+    - quarto render quarto-intro.qmd
+  tags:
+    - shared-cache
+  when: always
+
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - mv quarto-intro.html public/index.html
+    - echo "Your website is available at $CI_PAGES_URL"
+  needs: ["build_site"]
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - public
