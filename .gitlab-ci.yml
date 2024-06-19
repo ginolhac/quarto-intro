@@ -15,8 +15,6 @@ stages:
 build docker image:
   stage: build_image
   image: docker:20.10.12-dind
-  tags:
-    - shared-cache
   before_script:
     - docker info
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
@@ -35,7 +33,6 @@ build_site:
   cache:
     key: $CI_JOB_NAME
     paths:
-      - _freeze/
       - _site/
   artifacts:
     name: "$CI_JOB_NAME"
@@ -52,8 +49,6 @@ build_site:
         install.packages()"
   script:
     - quarto render quarto-intro.qmd
-  tags:
-    - shared-cache
   when: always
 
 pages:
