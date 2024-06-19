@@ -11,7 +11,7 @@ Presented at [DLSM](https://www.uni.lu/fstm-en/research-departments/department-o
 
 ### Slides
 
-[https://ginolhac.github.io/quarto-intro/](https://ginolhac.github.io/quarto-intro/) using:
+[https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/quarto-intro/](https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/quarto-intro/) using:
 
 - [Quarto revealjs](https://quarto.org/docs/presentations/revealjs/)
 - [Unilu-theme](https://github.com/ginolhac/unilu-theme) my quarto extension for styling the slides

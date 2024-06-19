@@ -16,8 +16,7 @@ title-slide-attributes:
   data-background-image: img/lit_prog_quarto.png
   data-background-position: "50% 10%"
   data-background-size: "280px"
-execute: 
-  echo: true
+embed-resources: true
 ---
 
 ## This seminar
