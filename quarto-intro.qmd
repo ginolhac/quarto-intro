@@ -8,7 +8,7 @@ author: "Aurélien Ginolhac, DLSM"
 image: img/lit_prog_quarto.png
 format:
   unilu-theme-revealjs:
-    logo_url: https://ginolhac.github.io/quarto-intro/
+    logo_url: https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/quarto-intro/
 revealjs-plugins:
   - pointer
 from: markdown+emoji

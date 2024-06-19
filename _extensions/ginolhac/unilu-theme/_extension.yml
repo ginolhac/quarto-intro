@@ -18,7 +18,7 @@ contributes:
       code-links: true
       code-block-height: 650px
       footnotes-hover: true
-      chalkboard: true
+      chalkboard: false
       width: 1600
       height: 900
       filters:
