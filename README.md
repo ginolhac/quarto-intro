@@ -1,3 +1,6 @@
+
+[![pipeline status](https://gitlab.com/uniluxembourg/fstm/dlsm/bioinfo/quarto-intro/badges/main/pipeline.svg)](https://gitlab.com/uniluxembourg/fstm/dlsm/bioinfo/quarto-intro/-/commits/main) 
+
 ## Quarto introduction
 
 [**Quarto**](https://quarto.org), is an open-source, language agnostic, scientific and technical publishing system
@@ -25,14 +28,7 @@ quarto install extension quarto-ext/pointer
 
 #### CI
 
-Rendered via Continuous Integration GHA with:
-
-- [r-lib](https://github.com/r-lib/actions)
-- [Quarto actions](https://github.com/quarto-dev/quarto-actions)
-
-
-
-
+Rendered via Continuous Integration
 
 ### Acknowledgments  🙏 👏
 

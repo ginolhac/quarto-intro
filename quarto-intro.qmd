@@ -20,13 +20,6 @@ execute:
   echo: true
 ---
 
-```{r}
-#| label: setup
-#| include: false
-library(tidyverse)
-```
-
-
 ## This seminar
 
 
