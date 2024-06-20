@@ -23,11 +23,10 @@ embed-resources: true
 
 
 :::{.callout-tip icon=false}
-## You will learn to:
+## Quarto: an open-source scientific and technical publishing system
 
 
 - What is literate programming
-- What is **Quarto**
 - Learn about the different possibilities:
     + Documents and reports
     + Presentations (this one is an example)
@@ -53,7 +52,7 @@ embed-resources: true
 
 
 ::: {.fragment}
-Pure programming is almost never happening, we want reports/websites where content and formatting are disconnected 
+For a bioinformatician, pure programming is barely happening, we need reports/websites where content and formatting are disconnected 
 :::
 
 ::: {.footer}
@@ -76,6 +75,7 @@ Version 1 in 2016, the idea was to have text and code in one document, execute {
 :::
 ::: {.column width="30%"}
 **Jupyter notebook** were also exploring the same concept.
+Rendering order led sometimes to [some frustration](https://www.youtube.com/watch?v=7jiPeIFXb6U)
 
 :::
 ::::
@@ -90,7 +90,7 @@ Credit: Artwork by [Allison Horst](https://github.com/allisonhorst)
 - **Lightweight** markup language with a simple syntax
 
 ::::: {.columns}
-:::: {.column width="45%"}
+:::: {.column width="50%"}
 
 ### HTML 
 
@@ -116,7 +116,7 @@ Credit: Artwork by [Allison Horst](https://github.com/allisonhorst)
 ::::
 :::: {.column width="50%" .fragment}
 
-### MD equivalent
+### Markdown equivalent
 
 ``` markdown
 # This is a heading
@@ -371,6 +371,19 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 ::::
 
 
+## Books
+
+:::: {.columns}
+::: {.column width="30%"}
+- Bundle large chapters into a website
+- Quarto [docs](https://quarto.org/docs) are one
+- Exports to PDF / EPUB etc...
+:::
+::: {.column width="70%"}
+![](img/targets-book.png){fig-align="center"}
+:::
+::::
+
 
 ## Websites
 
@@ -418,8 +431,8 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 - [Quarto](https://quarto.org/)
 - [Quarto extensions](https://m.canouil.dev/quarto-extensions/extensions.html)
 - [Quarto cheatsheet](https://rstudio.github.io/cheatsheets/quarto.pdf)
-- [Mine Quarto presentation](https://mine.quarto.pub/hello-quarto/#/quarto-next-generation-r-markdown)
-
+- [Quarto intro presentation](https://mine.quarto.pub/hello-quarto/#/quarto-next-generation-r-markdown)  by **Mine Cetinkaya-Rundel**
+- [Reproducible Medical manuscript](https://prerelease.quarto.org/docs/blog/posts/2024-04-01-manuscripts-rmedicine/) by **Mine Cetinkaya-Rundel**
 :::
 ::::
 
@@ -431,6 +444,7 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 * Xie Yihuie
 * Alison Horst
 * Hadley Wickham
+* Christophe Dervieux
 * Artwork by [Allison Horst](https://twitter.com/allison_horst)
 * Mickael Canouil
 * Jenny Bryan
