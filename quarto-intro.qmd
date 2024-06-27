@@ -22,19 +22,23 @@ embed-resources: true
 ## This seminar
 
 
-:::{.callout-tip icon=false}
+:::{.callout-tip icon=false .incremental}
 ## Quarto: an open-source scientific and technical publishing system
 
 
 - What is literate programming
 - Learn about the different possibilities:
     + Documents and reports
-    + Presentations (this one is an example)
+    + Presentations
+        + This one, rendered: {{< fa brands gitlab >}} [https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/quarto-intro/](https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/quarto-intro/)
     + Websites and blogs
     + Dashboards
     + Books
     + Manuscripts
 - Render to the output format you want
+- The bioinformatics team (Anthoula and I)
+    + What we do
+    + What services we provide
 
 :::
 
@@ -52,7 +56,7 @@ embed-resources: true
 
 
 ::: {.fragment}
-For a bioinformatician, pure programming is barely happening, we need reports/websites where content and formatting are disconnected 
+For a bioinformatician, pure programming is barely happening, we need reports/websites where [**content**]{.green} and formatting are disconnected 
 :::
 
 ::: {.footer}
@@ -158,11 +162,14 @@ Extended Rmarkdown. Languages and IDE agnostic
 - Excellent [documentation](https://quarto.org/docs)
 - Export a single (`.qmd`) document to various formats (PDF, HTML...)
 - Many [extensions](https://m.canouil.dev/quarto-extensions/extensions.html)
-- Text file that can (should) be managed by a version control system (like [git](https://git-scm.com/))
+- Text file that can (should) be tracked by a version control system (like {{< fa brands git >}} [git](https://git-scm.com/))
+    + {{< fa brands gitlab >}} [UNI gitlab](https://gitlab.com/uniluxembourg/fstm)
+    
+![](img/unilu-gitlab.png){fig-align="center" height=}
 
 
 
-## Including code to execute
+## Quarto pipeline
 
 [![](img/lit_prog_horst_qmd_render_schema.png)]{fig-align="center"}
 
@@ -275,13 +282,11 @@ format:
 ### PDF
 
 - Single file
-- Requires $\LaTeX$,
-  have a look at the **[TinyTeX](https://yihui.name/tinytex/)** package for minimal install
+- Requires $\LaTeX$
   
 :::{.callout-tip}
-## [Typst](https://github.com/typst/typst)
+## [Typst](https://github.com/typst/typst) new [format](https://quarto.org/docs/output-formats/typst.html) for {{< fa file-pdf >}}
 
-- New [format](https://quarto.org/docs/output-formats/typst.html) for {{< fa file-pdf >}}
 - Fast!
 - No need for $\LaTeX$
 :::
@@ -362,6 +367,7 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 :::: {.columns}
 ::: {.column width="40%"}
 - Automatic Table of content
+- Author metadata (affiliation, {{< fa envelope >}}, {{< fa brands orcid >}})
 - Here HTML output, but PDF is only one variable modification away
 :::
 ::: {.column width="60%"}
@@ -376,6 +382,8 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 :::: {.columns}
 ::: {.column width="30%"}
 - Bundle large chapters into a website
+    + Chapter on the left
+    + ToC on the right
 - Quarto [docs](https://quarto.org/docs) are one
 - Exports to PDF / EPUB etc...
 :::
@@ -391,7 +399,11 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 ::: {.column width="40%"}
 
 - Extensive use for teaching
-- Building and deployment via Continous Integration {{< fa brands gitlab >}}
+    + Anthoula
+    + R. Krause
+- Building and deployment via Continuous Integration (CI)
+    + Gitlab {{< fa brands gitlab >}}
+    + GitHub {{< fa brands github >}}
 - Automatic listing pages, search engine, navigation bar and smart caching
 - Demo using the [BASV53](https://basv53.uni.lu)
 
@@ -402,14 +414,14 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 :::
 ::::
 
-## Dashboards
+## Dashboards, what we do
 
-- Nice alternative to `shiny` apps (using scheduled pipelines)
+- Nice alternative to `shiny` apps (using CI scheduled pipelines)
 - Demo using the [labbook timeline of bioinfo](https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/labbook-dashboard/)
 
 ![](img/labbook-dashboard.png){fig-align="center"}
 
-## Manuscripts
+## Manuscripts, what service we offer
 
 ## Before we stop
 
