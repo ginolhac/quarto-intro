@@ -1,0 +1,18 @@
+project:
+  type: manuscript
+
+manuscript:
+  article: bioinfo.qmd
+
+format:
+  html:
+    comments:
+      hypothesis: true
+  docx: default
+  jats: default
+  plos-pdf:
+    output-file: "binfo-plos.pdf"
+  pdf: default
+
+execute:
+  freeze: true

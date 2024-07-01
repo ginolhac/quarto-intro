@@ -423,11 +423,51 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 
 ## Manuscripts, what service we offer
 
+:::: {.columns}
+::: {.column width="50%"}
+``` bash
+❯ quarto create project manuscript dlsm-bioinfo
+? Title (dlsm-bioinfo) › Services of the bioinfo DLSM team
+Creating project at /home/ginolhac/Jottacloud/DLSM/Seminars/2024-quarto-intro/dlsm-bioinfo:
+  - Created _quarto.yml
+  - Created .gitignore
+  - Created index.qmd
+  - Created references.bib
+```
+:::
+::: {.column width="50%" .fragment}
+```
+❯ tree dlsm-bioinfo/
+dlsm-bioinfo/
+├── dlsm-bioinfo.Rproj
+├── index.qmd
+├── _quarto.yml
+└── references.bib
+
+1 directory, 4 files
+```
+:::
+::::
+
+## PLoS template
+
+``` bash
+quarto add quarto-journals/plos
+```
+
+
+![](img/quarto-ext-journals.png){fig-align="center"}
+
+## Positron in beta June 2024
+
+![](img/positron.png){fig-align="center"}
+
+
 ## Before we stop
 
 
 :::::{.columns}
-::::{.column width="45%"}
+::::{.column width="55%"}
 :::{.callout-tip icon=false}
 ## Summary
 
@@ -437,7 +477,7 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 - `render` to different output formats
 :::
 
-:::{.callout-tip}
+:::{.callout-tip icon=false}
 ## Further reading 📚
 
 - [Quarto](https://quarto.org/)
@@ -452,13 +492,16 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 :::{.callout-note icon=false}
 ## Acknowledgments  🙏 👏
 
+* Anthoula Gaigneaux
+* Eric Koncina
+
+### Outside
 * Mine Cetinkaya-Rundel
 * Xie Yihuie
-* Alison Horst
 * Hadley Wickham
 * Christophe Dervieux
 * Artwork by [Allison Horst](https://twitter.com/allison_horst)
-* Mickael Canouil
+* Mickaël Canouil
 * Jenny Bryan
 :::
 

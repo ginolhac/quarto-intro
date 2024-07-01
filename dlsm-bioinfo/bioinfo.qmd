@@ -1,0 +1,130 @@
+---
+title: Services of the bioinfo DLSM team
+date: last-modified
+authors:
+  - name: Aurélien Ginolhac
+    orcid: 0000-0001-7665-9547
+    email: aurelien.ginolhac@uni.lu
+    phone: +3524666446560
+    affiliation: 
+      - id: dlsm
+        number: number
+        name: University of Luxembourg
+        department: FSLM
+        group: DLSM
+        address: 6, Avenue du Swing
+        city: Belvaux
+        region: ""
+        country: Luxembourg
+        postal-code: L-4367
+        url: https://www.uni.lu/fstm-en/research-departments/department-of-life-sciences-and-medicine/
+    degrees: 
+      - B.S.
+      - PhD
+    roles:
+      - Computing
+      - Dockerizing
+      - Writing
+    corresponding: true
+    equal-contributor: true
+  - name: Anthoula Gaigneaux
+    orcid: 0000-0003-0465-3773
+    email: anthoula.gaigneaux@uni.lu
+    affiliation:
+      - id: dlsm
+    degrees: 
+      - B.S.
+      - PhD
+    roles:
+      - Computing
+      - Biostatistic
+      - Writing
+    equal-contributor: true
+keywords:
+  - Bioinformatics
+  - Biostatistics
+bibliography: ["references.bib", "gaigneaux.bib", "ginolhac.bib"]
+---
+
+## Abstract
+
+**Literate programming** is not new, 40 years ago it was already discussed[@knuth84].
+
+Some *lorem ipsum* using a `shortcode`
+
+{{< lipsum 1 >}}
+
+## Services
+
+-   Code review
+    -   C. Angeli
+    -   F. Irfan
+-   Biostatistics (mostly Anthoula)
+-   HPC training, on top of the official [hpcschool](https://hpc.uni.lu/education/hpcschool) (Aurélien)
+
+### Analysis, -omics
+
+::: {layout-ncol="2" layout-valign="center"}
+![bulk RNA-seq](dag-rna-seq.png){#fig-rna width="300"} ![ATAC-seq](dag-atac-seq.png){#fig-atac width="300"}
+:::
+
+
+Focusing on creating [snakemake](https://snakemake.github.io/) templates.
+
+It helps us, empowering motivated users, help reproducibility and scaling-up larger experiments.
+
+-   Bulk RNA-seq
+-   single-cell RNA-seq (Anthoula's expertise)
+-   Metagenomics
+    -   16S
+    -   Shotgun
+-   Epigenetics
+    -   ATAC-seq
+    -   ChIP-seq
+    -   Cut&Tag
+-   Proteomics
+
+
+### Ethical commitee
+
+Anthoula is a member of the [Animal Experimentation Ethics committee](https://www.uni.lu/en/about/governance/aeec/).
+
+## Publications
+
+-   Anthoula: see @tbl-ref-anthoula.
+-   Aurélien: see @tbl-ref-aurelien.
+
+Fetch from [Orbi.lu](https://orbilu.uni.lu/) for the both of us, saving the Bibtex (`.bib`) as follows:
+
+![Orbi export to BibTex](orbi-bib-export.png){fig-alt="orbi" fig-align="center"}
+
+Can be inserted to the document in **visual mode**:
+
+![Windows for inserting a citation in Quarto visual mode](insert-citation.png){fig-align="center"}
+
+### A. Gaigneaux
+
+| Year | Paper             |
+|------|-------------------|
+| 2024 | [@kaya2024]       |
+| 2023 | [@gureghian2023]  |
+| 2024 | [@kaya2023]       |
+| 2024 | [@kirchmeyer2023] |
+| 2024 | [@koncina2023]    |
+
+: Anthoula's recent papers {#tbl-ref-anthoula}
+
+### A. Ginolhac
+
+| Year | Paper           |
+|------|-----------------|
+| 2023 | [@besseron2023] |
+| 2023 | [@gavriil2023]  |
+| 2023 | [@gomez2023]    |
+
+: Aurelien's recent papers {#tbl-ref-aurelien}
+
+## References
+
+::: {#refs}
+:::
