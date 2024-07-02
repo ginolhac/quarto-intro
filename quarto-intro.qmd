@@ -110,7 +110,7 @@ Credit: Artwork by [Allison Horst](https://github.com/allisonhorst)
 
 <ul>
 <li><a href="http://exa.com"><code>site</code></a>
-<li><img src="path/to/image.jpg">
+<li><img src="https://images.computerhistory.org/revonline/images/500004391-03-01.jpg?w=200">
 </ul>
 </body>
 </html>
@@ -129,8 +129,10 @@ This is some text in a **paragraph**
 ## This is a second level heading
 
 - [`site`](http://exa.com)
-- ![](path/to/image.jpg)
+- ![](https://images.computerhistory.org/revonline/images/500004391-03-01.jpg?w=200)
 ```
+
+![Linus and Tux](linus-tux.png){.fragment}
 
 ::::
 :::::
@@ -141,7 +143,7 @@ See [author markdown guide](https://quarto.org/docs/authoring/markdown-basics.ht
 
 ## Quarto 
 
-Extended Rmarkdown. Languages and Integrated Development Editor agnostic
+Extended Rmarkdown. Languages and **Integrated Development Environment** agnostic
 
 :::: {.columns}
 ::: {.column width="20%"}
@@ -193,7 +195,7 @@ Extended Rmarkdown. Languages and Integrated Development Editor agnostic
 - Extracts {{< fa brands r-project >}} chunks
 - Interpret/Run them
 - Formats results as markdown
-- Reinject in the document (MD)
+- Re-inject in the document (MD)
 
 ::::
 
