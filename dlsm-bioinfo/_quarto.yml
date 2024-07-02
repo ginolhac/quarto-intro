@@ -2,17 +2,15 @@ project:
   type: manuscript
 
 manuscript:
-  article: bioinfo.qmd
+  article: index.qmd
 
 format:
   html:
+    embed-resources: true
     comments:
       hypothesis: true
   docx: default
-  jats: default
-  plos-pdf:
-    output-file: "binfo-plos.pdf"
-  pdf: default
+  plos-pdf: default
 
 execute:
   freeze: true

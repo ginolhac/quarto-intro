@@ -108,9 +108,9 @@ Can be inserted to the document in **visual mode**:
 |------|-------------------|
 | 2024 | [@kaya2024]       |
 | 2023 | [@gureghian2023]  |
-| 2024 | [@kaya2023]       |
-| 2024 | [@kirchmeyer2023] |
-| 2024 | [@koncina2023]    |
+| 2023 | [@kaya2023]       |
+| 2023 | [@kirchmeyer2023] |
+| 2023 | [@koncina2023]    |
 
 : Anthoula's recent papers {#tbl-ref-anthoula}
 
@@ -125,6 +125,8 @@ Can be inserted to the document in **visual mode**:
 : Aurelien's recent papers {#tbl-ref-aurelien}
 
 ## References
+
+Automatically inserted according to the chosen `bsl` file. Here, the PLoS format.
 
 ::: {#refs}
 :::
