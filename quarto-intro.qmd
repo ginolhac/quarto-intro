@@ -43,7 +43,6 @@ embed-resources: true
 :::
 
 
-
 ## 
 
 
@@ -142,11 +141,14 @@ See [author markdown guide](https://quarto.org/docs/authoring/markdown-basics.ht
 
 ## Quarto 
 
-Extended Rmarkdown. Languages and IDE agnostic
+Extended Rmarkdown. Languages and Integrated Development Editor agnostic
 
 :::: {.columns}
 ::: {.column width="20%"}
 ![](img/lit_prog_quarto_ide.png)
+
+![Positron](dlsm-bioinfo/positron-logo.png){width=100 fig-align="left"}
+
 :::
 ::: {.column width="80%"}
 ![](img/lit_prog_horst_quarto_schematic.png)
@@ -421,7 +423,7 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 
 ![](img/labbook-dashboard.png){fig-align="center"}
 
-## Manuscripts, what service we offer
+## Quarto Manuscripts
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -436,7 +438,7 @@ Creating project at /home/ginolhac/Jottacloud/DLSM/Seminars/2024-quarto-intro/dl
 ```
 :::
 ::: {.column width="50%" .fragment}
-```
+``` bash
 ❯ tree dlsm-bioinfo/
 dlsm-bioinfo/
 ├── dlsm-bioinfo.Rproj
@@ -457,6 +459,37 @@ quarto add quarto-journals/plos
 
 
 ![](img/quarto-ext-journals.png){fig-align="center"}
+
+## Quarto Manuscripts, what services we offer
+
+:::: {.columns}
+::: {.column width="50%"}
+``` bash
+dlsm-bioinfo/
+├── bioinfo.qmd
+├── dag-atac-seq.png
+├── dag-rna-seq.png
+├── insert-citation.png
+├── orbi-bib-export.png
+├── _extensions
+│   └── quarto-journals
+│       └── plos/
+├── gaigneaux.bib
+├── ginolhac.bib
+├── references.bib
+├── plos2015.bst <- bib style
+├── _manuscript/ <- outputs
+└── _quarto.yml  <- main config
+
+```
+Demo HTML output
+
+:::
+::: {.column width="50%" .fragment}
+PLoS PDF example:
+![](dlsm-bioinfo/pdf-plos.png)
+:::
+::::
 
 ## Positron in beta June 2024
 
