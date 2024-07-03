@@ -210,7 +210,7 @@ Extended Rmarkdown. Languages and **Integrated Development Environment** agnosti
 ::::
 :::::
 
-## Quarto document: Structure
+## Quarto document: Structure {.scrollable}
 
 
 ::::: {.columns}
@@ -308,7 +308,7 @@ format:
 :::::
 
 
-## Output examples 1/2
+## Output examples 1/2  {.scrollable}
 
 :::: {.columns}
 ::: {.column width="50%"}

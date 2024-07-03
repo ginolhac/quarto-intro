@@ -1,15 +1,10 @@
 ---
-format: pdf
-title: Bioinfo DLSM team 2024
-author: Aurélien Ginolhac
-date: today
-execute: 
-  echo: true
+format: html
 ---
 
 ## Loading libraries
 
-::: {.callout-note}
+::: callout-note
 `include: false` is used to avoid displaying the code chunk in the final document.
 :::
 
@@ -22,7 +17,6 @@ library(dplyr)
 library(ggplot2)
 ```
 
-
 ## Loading labbook
 
 ```{r}
@@ -32,7 +26,6 @@ lb <- read_tsv("data/labbook_aurelien_2024.tsv",
                show_col_types = FALSE)
 ```
 
-
 ```{r}
 #| label: tbl-gino-2024
 #| tbl-cap: 2024 top projects A. Ginolhac
@@ -41,8 +34,6 @@ count(lb, Project, sort = TRUE) |>
   filter(n > 10) |> 
   knitr::kable()
 ```
-
-
 
 ## Barplot for 190601
 
@@ -59,4 +50,3 @@ lb |>
   geom_bar() +
   theme_bw(14)
 ```
-
