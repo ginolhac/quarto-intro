@@ -65,7 +65,9 @@ Some *lorem ipsum* using a `shortcode`
 ### Analysis, -omics
 
 ::: {layout-ncol="2" layout-valign="center"}
-![bulk RNA-seq](dag-rna-seq.png){#fig-rna width="300"} ![ATAC-seq](dag-atac-seq.png){#fig-atac width="300"}
+![bulk RNA-seq](dag-rna-seq.png){#fig-rna width="300"} 
+
+![ATAC-seq](dag-atac-seq.png){#fig-atac width="300"}
 :::
 
 
@@ -88,6 +90,19 @@ It helps us, empowering motivated users, help reproducibility and scaling-up lar
 ### Ethical commitee
 
 Anthoula is a member of the [Animal Experimentation Ethics committee](https://www.uni.lu/en/about/governance/aeec/).
+
+## Teaching
+
+### A. Gaigneaux
+
+- Bachelor of Life Sciences: 5^th^ semester: Biostatistics2 (7 ECTS)
+
+### A. Ginolhac
+
+- Bachelor of Life Sciences: 2^th^ semester: _Informatique_ (2 ECTS)
+- Bachelor of Life Sciences: 4^th^ semester: Biostatistics (4 ECTS)
+- Master of Computational Biomedecine: bulk RNA-Seq (~ 15 hours)
+- Master of High-Performace Computating: workflow managers (3 hours)
 
 ## Publications
 
@@ -123,6 +138,7 @@ Can be inserted to the document in **visual mode**:
 | 2023 | [@gomez2023]    |
 
 : Aurelien's recent papers {#tbl-ref-aurelien}
+
 
 ## References
 
