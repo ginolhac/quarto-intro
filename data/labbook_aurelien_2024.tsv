@@ -1,0 +1,248 @@
+Date	Project	Description
+240104	INFO	work on `unilur` PDF output
+240105	241001	fix labbook project mistake on ids
+240105	242301	setup a quarto version
+240108	242301	intro slides
+240109	241001	shift labbook to `r2u` dropping out `renv`
+240109	190601	panel of counts for TH markers
+240110	INFO	Github actions using `r2u`
+240110	INFO	DLSM seminar
+240110	190601	meeting with Tony
+240111	190503	meeting with Madita, tried to install `IMP3`
+240111	190601	TPM and wrap plots per marker for better comparisons
+240114	INFO	debug gitlab ci with `renv` for biostat2
+240115	220601	meeting with Elena, look for encode bed annotations
+240115	2405XX	meeting with Sura, help with rstudio server in terminal
+240115	190601	dispersion in gene estimate per sex
+240115	190601	check the sequencing effort per group
+240116	231001	exam surveillance of biostat2 with Anthoula
+240116	230301	Ma et al. 2008, relative log2 expression
+240116	230301	clustering for Ma 2008
+240116	230301	relative t0 for Rajan Illumina
+240117	230301	meeting with Daniel, Rohan and Lis
+240117	230301	overlay the 3 datasets
+240118	230301	contrast t96h vs t0 for the illumina platform
+240118	190601	de-duplicate code
+240119	190601	revert previous commit
+240119	190601	mv files
+240119	230103	get gt tables correct disabling quarto processing of html tables
+240119	INFO	meeting with T. Sauter about filtering or not low mapping quality reads in `featureCounts`
+240119	230504	update pkgs
+240119	190601	targets for the astrocytes/oligo
+240119	230103	renv.lock from Anthoula
+240122	190601	targets revised at project root
+240122	190601	relabelling successful
+240122	190601	separate per cell type
+240123	INFO	meeting with Anjana Elapavalore about ShinyProxy
+240123	INFO	read and send comments back to Frida on the Park7/DJ-1 KO manuscript
+240123	190601	same symbol for sex
+240123	190601	all contrasts for main dds
+240124	190601	reduce number of genes for subset of dds
+240124	190601	testing interaction between sex and condition
+240124	240501	snakemake rna-seq template with Madita
+240124	2401XX	code review with Christian
+240125	230504	add public dataset Yun et al. 2022 for comparison
+240125	230504	compare Monica results with Yun et al. 2022
+240125	240601	snakemake atac-seq v0.0.3
+240126	2401XX	help Christian
+240126	240601	matrix bigwig with deeptools
+240126	240601	QC using deeptools
+240126	230504	compare pathways both paired
+240126	230503	TPM for all mice in some pathways of interest
+240129	230301	cluster without variance stabilizing
+240129	230301	prep for fastLm
+240129	230301	filter genes with coef and r2 similar as Spred1, send report
+240129	230503	descisions after meeting with Monica, trash the WT_3
+240129	190601	merging Astro Males and Females
+240130	190601	saving hist plots
+240130	190601	histograms without raw data, save a lot of time
+240130	INFO	meeting with Sysbio group about the Elab Quarks
+240130	240601	peakannotation for Genrich calls
+240130	240601	with genome wide coverage plot
+240130	240601	cleanup sample names
+240131	240601	diffbind in Singularity
+240131	240601	silence messages
+240131	240601	right parameters to run DiffBind on HPC
+240201	230301	changes following Daniel' feedback
+240201	230301	meeting Lis Daniel
+240201	230301	meeting minutes
+240202	240601	found out how to limit manually number of cores used by dba.normalize
+240202	240601	explore results
+240202	230503	remove sample WT_3 as cannot sure it is a control
+240202	230503	wrong committed file
+240205	242401	prep for the new semester. Keeping Rmd and `targets` for 2024
+240205	242301	PR of `quarto` into `main`
+240206	242301	programming lecture
+240206	190601	DEG for the model with interactions between cell_type and sex
+240206	190601	with upset plot for all contrats of model with interactions
+240207	190601	contrasts in only one var
+240207	190601	Run static branching to fetch only the contrasts of interest
+240207	190601	apply memory efficient tricks from W. Landau
+240207	INFO	DLSM seminar
+240207	INFO	download 2/3 of the fastq files from LIH
+240208	190601	fix name conflicts between contrasts target name and contrasts colum name
+240208	190601	prepared report
+240208	230301	run Genewalk on the gene clusters
+240209	190601	top 5 genes per 12 contrats of interest
+240209	190601	export tsv as requested
+240219	242301	revise intro, new logo
+240220	242401	revise intro, gapminder addition
+240221	190601	run the the additional 3 samples `siCyp1b1` for Sergio revisions
+240221	190601	fix path
+240222	240601	implementing TOBIAS snakemake up to merging replicates
+240223	242301	teaching
+240223	242401	teaching
+240226	190601	bugfix, use local env dds
+240226	190601	meeting with Anastasiia, sent relabel dds
+240226	190601	bugfix, use local env dds
+240227	240601	tobias bindetect for both contrasts
+240228	190601	check Park7 counts 2nd vs 1st sequencing
+240228	242401	fix issues and split lectures
+240301	230502	missing enrichment for TGFb vs Ctrl
+240301	242301	teaching
+240301	242401	teaching
+240304	240601	add plotHeatmap in atac-seq snakemake
+240305	2406XX	code review with Anastasiia
+240305	2406XX	code review with Evelyn
+240306	242301	new lecture on Quarto
+240306	230602	run `TOBIAS` on PD or PSP vs Controls
+240307	230602	run `DiffBind` on PD or PSP vs Controls
+240308	242301	teaching
+240308	242401	teaching
+240311	242301	new lecture on literate programming
+240312	242301	done with literate programming
+240312	190601	redo feature counts with no mapping quality filtering for the _SRY_ gene
+240312	240501	meeting with Madita, batch effect
+240312	240501	removing batch effect
+240312	240501	with volcanoes
+240312	240501	post meeting with Madita, sent results
+240313	190601	sent counts to Anastasiia
+240313	190601	digging into the logFC = 0 for Park7 in Female Astro
+240314	190601	apeglm is shrinking too much, disable it for one contrast analysis
+240315	242301	teaching
+240315	242401	teaching
+240318	230103	merge NES from proteomic
+240319	230503	advise for Monica
+240319	242301	work on practical2
+240320	190601	meeting with Anastasiia
+240320	2405XX	meeting with Sura, hpc training
+240321	190601	meeting with Anastasiia
+240321	INFO	building my own toolchain-foss-2023b with `Easybuild` using Xavier Besseron directives
+240322	242301	teaching
+240322	242401	teaching
+240325	230504	focus on hippo pathway
+240325	230503	comparison for the hippo pathway for the CORE grant submision
+240325	230503	more pathways
+240326	230503	with adj p-values
+240326	230503	with padj labels
+240326	2405XX	meeting with Sura
+240327	242301	dplyr lecture prep
+240327	190601	meeting with Anastasiia
+240328	242301	dplyr lecture prep 2
+240329	242301	teaching
+240329	242401	teaching
+240402	INFO	new ssh key on gitlab/github/ipa hpc/lums LCSB following xz backdoor infection
+240402	242301	convert projects to quarto
+240403	230301	ignore some files
+240403	242301	convert projects to quarto
+240412	242301	teaching
+240412	242401	teaching
+240416	INFO	public webdav LCSB `duck -u aurelien.ginolhac --upload  davs://webdav-r3lab.uni.lu/public/DLSM/ ~/fq_yeast_testdata.tgz`
+240416	INFO	meeting with Etienne Bacher, `tidypolars` on human genome
+240417	241701	prepare slides for tecahing snakemake in master HPC
+240417	241701	prepare practicals for teaching snakemake in master HPC
+240418	241701	correction practicals following Xavier comments
+240418	200102	meeting with Nadège, Iris and Mélanie
+240419	242301	teaching
+240419	242401	teaching
+240422	241701	prepare practicals
+240422	200102	IGV region for Huh7 cells
+240423	241701	teaching snakemake in master HPC
+240424	230604	mean/sd for rlog
+240424	230604	wider format preferred
+240424	242301	convert ggplot2 to quarto
+240425	242301	convert stringr to quarto
+240426	242301	teaching
+240426	242401	teaching
+240425	200102	start differential exon usage using dexseq
+240429	200102	new R and count reads on hpc python version for dexseq (`module load bio/HTSeq`)
+240429	200102	important option for python dexseq count: bam sorted by pos
+240429	200102	counts them all
+240430	200102	bugfix in counting reads
+240430	230604	running GeneWalks on 4 DEG sets
+240430	INFO	re-create the `lang/R/4.3.2` module on `aion` as `{Matrix}` was missing and not available
+240430	INFO	install `shiny-server` and `nginx` on https://10.240.18.58/ so Rocky Linux
+240502	200102	fix design
+240502	200102	run on HPC as requires too much memory locally
+240503	230604	running GeneWalk with a more relaxed threshold
+240506	200102	full genome too large for DEXSeq, using chr20 only
+240506	242301	teaching
+240507	200102	meeting with Iris and Melanie
+240508	200102	testing edgeR with featureCounts at exon level
+240508	200102	with gene symbol inside edgeR
+240514	INFO	ShinyProxy version 3.1.0 on the new shiny-server VM (`10.240.18.58`)
+240515	INFO	reinstall all shiny app on the new shiny-server VM (`10.240.18.58`)
+240515	INFO	transition of shiny server is over.
+240516	INFO	install `{arrow}` on Arch Linux using `Sys.setenv("NOT_CRAN" = "true", "LIBARROW_BUILD" = FALSE, "ARROW_R_DEV" = TRUE)`
+240517	242301	teaching
+240517	242401	teaching
+240521	200102	counts exon level for all samples for edgeR analysis
+240521	2410XX	demand for Patricia Aguiar internship in July to HR
+240521	200102	typo
+240522	200102	counts at exons level obtained
+240523	200102	rerun pipeline with new hashing and prep static for splice analysis
+240523	200102	targets edgeR for the 3 cells
+240524	242301	teaching
+240524	242401	teaching
+240527	200102	time contrasts using static within static nested branching
+240527	200102	diffSplice DGE from edgeR
+240527	200102	plot splicegde
+240527	200102	without tar_combine unfortunatly
+240528	INFO	learning about `tar_combine()` in nested `tar_map()` see `~/Projects/static-in-static.R`
+240528	INFO	user `shinyproxy` no longer able to to log in, restore with `sudo usermod -s /bin/bash shinyproxy`
+240531	242301	teaching
+240531	242401	teaching
+240603	242301	meeting with Ines
+240604	INFO	meeting with Fabrice, first contact the Windows WM `moneo.uni.lux` for monitoring temperatures of freezers
+240603	242301	meeting with David
+240605	INFO	Windows WM with  `rdesktop moneo.uni.lux` from Linux. User: `UNI\aurelien.ginolhac`
+240606	242301	meeting with Yasmine
+240606	INFO	`targets` presentation for iscb RGB and Jeff Didier
+240607	INFO	release version `0.1.0` of unilur for PDF output
+240607	242401	work on exam 2024 using unilur and https://github.com/vuw-scps/quarto-vuwexam template
+240607	200102	combine nested static pipeline, much better programming
+240607	200102	top10 diffSpliceDEG per cell and per contrast
+240610	242401	looking for a dataset exam
+240611	200102	plot top20 diffSplice genes across cell lines
+240612	242401	exam ready
+240612	242301	exam ready
+240613	2410XX	invigilation exam for medical course
+240613	2410XX	prepare seminar slides
+240614	INFO	Account from the company IFM using a belgium address, install moneo.exe on VM
+240617	242401	exam, defenses and correction
+240617	242401	exam send marks to SPA
+240618	210502	new rna-seq run in `~/mdm/2024-06_MBMDM` for Mina/Madita revision
+240618	INFO	activation temp of the moneo software waiting for final license
+240619	242401	conversion to quarto using Roland and Thanh Nguyen work
+240620	2506XX	teaching Sophia Corce the connect to HPC and snakemake rna-seq template
+240620	210504	running the snakemake rna-seq template of `2024-06_IFUNEC_Croce/RNA`
+240620	210504	running the snakemake atac-seq template of `2024-06_IFUNEC_Croce/ATAC`
+240621	210504	fixing diffbind issue for  atac-seq `2024-06_IFUNEC_Croce/ATAC`
+240621	210504	fixing deeptools issue for  atac-seq `2024-06_IFUNEC_Croce/ATAC`
+240621	242301	meeting with CO2 climate change student group
+240624	INFO	PORG meeting
+240624	INFO	backup Maria Pacheco files `rsync -av --no-g --no-p /scratch/users/mpacheco /mnt/isilon/projects/lsru-bioinfo/`
+240624	242301	review group projects
+240624	210504	fixing TOBIAS issue for  atac-seq `2024-06_IFUNEC_Croce/ATAC`
+240624	210504	volcanoes from DiffBind with edgeR
+240625	210504	edgeR results
+240625	242301	final exam + defences of group projects
+240626	242301	correction exam + send marks
+240626	2401XX	replicate Fizza code single-cell
+240627	2401XX	meeting with Fizza code review
+240627	200602	25 rlog for Dagmar (initial project 170606, archived in `/mnt/isilon/projects/170606`)
+240628	200102	meeting with Melanie, Nadege and Iris
+240628	190601	check difference normalized counts per sex
+240628	200102	WIP plot all cell lines exon DGE
+240628	200102	benchmark dplyr and tidypolars
+240701	241001	prepare seminar slides

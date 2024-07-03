@@ -425,6 +425,33 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 
 ![](img/labbook-dashboard.png){fig-align="center"}
 
+
+## Demo simple Quarto doc in VScode
+
+:::: {.columns}
+::: {.column width="50%"}
+### Minimal header
+``` yaml
+---
+format: html
+---
+```
+:::
+::: {.column width="50%"}
+### 
+``` yaml
+---
+format: pdf
+title: Bioinfo DLSM team 2024
+author: Aurélien Ginolhac
+date: today
+execute: 
+  echo: false
+---
+```
+:::
+::::
+
 ## Quarto Manuscripts
 
 :::: {.columns}
