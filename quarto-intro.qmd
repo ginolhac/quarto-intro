@@ -50,7 +50,7 @@ embed-resources: true
 >**Literate programming** is the practice of [mixing]{.green} code and descriptive writing in order to execute and explain a [data analysis]{.green} **simultaneously in the same document**.
 
 
-— _William Landau_
+— _William Landau_ Developer of `{targets}`
 :::
 
 
@@ -104,7 +104,7 @@ Credit: Artwork by [Allison Horst](https://github.com/allisonhorst)
 
 <h1>This is a heading</h1>
 
-<p>This is some text in a <b>paragraph</b>.</p>
+<p>This is some text in a <b>paragraph</b></p>
 
 <h2>This is a second level heading</h2>
 
@@ -166,8 +166,8 @@ Extended Rmarkdown. Languages and **Integrated Development Environment** agnosti
 - Excellent [documentation](https://quarto.org/docs)
 - Export a single (`.qmd`) document to various formats (PDF, HTML...)
 - Many [extensions](https://m.canouil.dev/quarto-extensions/extensions.html)
-- Text file that can (should) be tracked by a version control system (like {{< fa brands git >}} [git](https://git-scm.com/))
-    + {{< fa brands gitlab >}} [UNI gitlab](https://gitlab.com/uniluxembourg/fstm)
+- Text file that can (should) be tracked by a version control system (like {{< fa code-branch >}} [git](https://git-scm.com/))
+    + {{< fa brands gitlab >}} [UNI gitlab](https://gitlab.com/uniluxembourg/fstm), official place for collaborative work, or  {{< fa brands github >}} [GitHub](https://github.com)
     
 ![](img/unilu-gitlab.png){fig-align="center" height=}
 
@@ -386,7 +386,7 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 :::: {.columns}
 ::: {.column width="30%"}
 - Bundle large chapters into a website
-    + Chapter on the left
+    + Chapters on the left
     + ToC on the right
 - Quarto [docs](https://quarto.org/docs) are one
 - Exports to PDF / EPUB etc...
@@ -456,10 +456,13 @@ execute:
 
 :::: {.columns}
 ::: {.column width="50%"}
+
+### Command-line
+
 ``` bash
 ❯ quarto create project manuscript dlsm-bioinfo
 ? Title (dlsm-bioinfo) › Services of the bioinfo DLSM team
-Creating project at /home/ginolhac/Jottacloud/DLSM/Seminars/2024-quarto-intro/dlsm-bioinfo:
+Creating project at DLSM/Seminars/2024-quarto-intro/dlsm-bioinfo:
   - Created _quarto.yml
   - Created .gitignore
   - Created index.qmd
@@ -467,6 +470,9 @@ Creating project at /home/ginolhac/Jottacloud/DLSM/Seminars/2024-quarto-intro/dl
 ```
 :::
 ::: {.column width="50%" .fragment}
+
+### Outcome
+
 ``` bash
 ❯ tree dlsm-bioinfo/
 dlsm-bioinfo/
@@ -481,6 +487,8 @@ dlsm-bioinfo/
 ::::
 
 ## PLoS template
+
+Command to add an extensions among many [available](https://m.canouil.dev/quarto-extensions/extensions.html) (+165 references)
 
 ``` bash
 quarto add quarto-journals/plos
