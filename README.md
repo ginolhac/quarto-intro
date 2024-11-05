@@ -6,16 +6,14 @@
 - Presented at [DLSM](https://www.uni.lu/fstm-en/research-departments/department-of-life-sciences-and-medicine/)
 - Presented at [RSGLux](https://www.uni.lu/life-en/social-life/student-associations-clubs/rsg/)
 
+## Slides
 
-
-### Slides
-
-[https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/quarto-intro/](https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/quarto-intro/) using:
+[https://ginolhac.github.io/quarto-intro/](https://ginolhac.github.io/quarto-intro/) using:
 
 - [Quarto revealjs](https://quarto.org/docs/presentations/revealjs/)
 - [Unilu-theme](https://github.com/ginolhac/unilu-theme) my quarto extension for styling the slides
 
-#### Extensions setup
+### Extensions setup
 
 Install using:
 
@@ -25,18 +23,18 @@ quarto install extension quarto-ext/fontawesome
 quarto install extension quarto-ext/pointer
 ```
 
-#### CI
+### CI
 
 Rendered via Continuous Integration
 
-### Acknowledgments  🙏 👏
+## Acknowledgments  🙏 👏
 
 - **Christophe Dervieux** 
 - **J. J. Allaire** 
 - [**Mine Çetinkaya-Rundel**](https://quarto.org/docs/blog/posts/2024-04-01-manuscripts-rmedicine/): _Quarto for Reproducible Medical Manuscripts_
 
 
-### Further reading 📚
+## Further reading 📚
 
 - [Mine Quarto intro presentation](https://mine.quarto.pub/hello-quarto/#/quarto-next-generation-r-markdown)
 - [**Quarto documentation**](https://quarto.org/docs/guide/)
