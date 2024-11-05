@@ -1,11 +1,10 @@
 
-[![pipeline status](https://gitlab.com/uniluxembourg/fstm/dlsm/bioinfo/quarto-intro/badges/main/pipeline.svg)](https://gitlab.com/uniluxembourg/fstm/dlsm/bioinfo/quarto-intro/-/commits/main) 
-
 ## Quarto introduction
 
 [**Quarto**](https://quarto.org), is an open-source, language agnostic, scientific and technical publishing system
 
-Presented at [DLSM](https://www.uni.lu/fstm-en/research-departments/department-of-life-sciences-and-medicine/)
+- Presented at [DLSM](https://www.uni.lu/fstm-en/research-departments/department-of-life-sciences-and-medicine/)
+- Presented at [RSGLux](https://www.uni.lu/life-en/social-life/student-associations-clubs/rsg/)
 
 
 
