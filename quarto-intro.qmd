@@ -1,14 +1,14 @@
 ---
 title: "Quarto introduction"
 subtitle: "Literate programming"
-date: today
+date: "2024-11-14"
 date-format: "dddd, [the] D[<sup style='font-size:65%;font-style:italic;'>th</sup>] [of] MMMM, YYYY"
 institute: "University of Luxembourg"
 author: "Aurélien Ginolhac, DLSM"
 image: img/lit_prog_quarto.png
 format:
   unilu-theme-revealjs:
-    logo_url: https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/quarto-intro/
+    logo_url: https://ginolhac.github.io/quarto-intro/
 revealjs-plugins:
   - pointer
 from: markdown+emoji
@@ -19,7 +19,7 @@ title-slide-attributes:
 embed-resources: true
 ---
 
-## This seminar
+## This presentation
 
 
 :::{.callout-tip icon=false .incremental}
@@ -30,15 +30,12 @@ embed-resources: true
 - Learn about the different possibilities:
     + Documents and reports
     + Presentations
-        + This one, rendered: {{< fa brands gitlab >}} [https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/quarto-intro/](https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/quarto-intro/)
+        + This one, rendered: {{< fa brands github >}} [https://ginolhac.github.io/quarto-intro/](https://ginolhac.github.io/quarto-intro/)
     + Websites and blogs
     + Dashboards
     + Books
     + Manuscripts
 - Render to the output format you want
-- The bioinformatics team (Anthoula and I)
-    + What we do
-    + What services we provide
 
 :::
 
@@ -132,7 +129,7 @@ This is some text in a **paragraph**
 - ![](https://images.computerhistory.org/revonline/images/500004391-03-01.jpg?w=200)
 ```
 
-![Linus and Tux](linus-tux.png){.fragment}
+![Linus and Tux](img/linus-tux.png){.fragment}
 
 ::::
 :::::
