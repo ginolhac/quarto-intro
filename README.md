@@ -25,7 +25,10 @@ quarto install extension quarto-ext/pointer
 
 ### CI
 
-Rendered via Continuous Integration
+Rendered via Continuous Integration GHA with:
+
+- [r-lib](https://github.com/r-lib/actions)
+- [Quarto actions](https://github.com/quarto-dev/quarto-actions)
 
 ## Acknowledgments  🙏 👏
 
