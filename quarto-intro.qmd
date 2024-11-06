@@ -11,6 +11,7 @@ format:
     logo_url: https://ginolhac.github.io/quarto-intro/
 revealjs-plugins:
   - pointer
+  - drop
 from: markdown+emoji
 title-slide-attributes: 
   data-background-image: img/lit_prog_quarto.png
@@ -497,7 +498,7 @@ quarto add quarto-journals/plos
 ## Quarto Manuscripts, what services we offer
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="40%"}
 ``` bash
 dlsm-bioinfo/
 ├── bioinfo.qmd
@@ -519,13 +520,67 @@ dlsm-bioinfo/
 Demo HTML output
 
 :::
-::: {.column width="50%" .fragment}
+::: {.column width="60%" .fragment}
 PLoS PDF example:
 ![](dlsm-bioinfo/pdf-plos.png)
 :::
 ::::
 
-## Positron in beta June 2024
+
+## Quarto extensions
+
+:::: {.columns}
+::: {.column width="50%"}
+- We saw already some examples
+    + PLoS format
+    + This unilu-theme
+    + Pointer (press {{< kbd q >}})
+:::
+::: {.column width="50%" .fragment}
+Compiled [here](https://m.canouil.dev/quarto-extensions/)
+![](img/quarto-extensions.png)
+:::
+::::
+
+## Quarto [Drop](https://github.com/r-wasm/quarto-drop): a console in your browser
+
+:::: {.columns}
+::: {.column width="50%"}
+
+- Add in header:
+
+``` yaml
+---
+revealjs-plugins:
+  - drop
+---
+```
+
+
+- Drop a console of [{{< fa brands r-project >}} webR](https://docs.r-wasm.org/) or [{{< fa brands python >}} pyodide](https://pyodide.org/) with {{< kbd ` `  >}} or button.
+- Pre-load packages
+``` yaml
+format:
+  revealjs:
+    drop:
+      engine: webr
+      webr:
+        packages:
+          - ggplot2
+          - dplyr
+```
+:::
+::: {.column width="50%" .fragment}
+Example:
+
+- `{ggplot2}` gets automatically downloaded
+
+![](img/quarto-drop.png)
+:::
+::::
+
+
+## Positron in beta since June 2024
 
 ![](img/positron.png){fig-align="center"}
 
