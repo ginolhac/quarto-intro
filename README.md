@@ -18,9 +18,10 @@
 Install using:
 
 ``` bash
-quarto install extension ginolhac/unilu-theme
-quarto install extension quarto-ext/fontawesome
-quarto install extension quarto-ext/pointer
+quarto add ginolhac/unilu-theme
+quarto add quarto-ext/fontawesome
+quarto add quarto-ext/pointer
+quarto add r-wasm/quarto-drop
 ```
 
 ### CI
