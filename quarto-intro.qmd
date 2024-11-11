@@ -726,8 +726,50 @@ Deploy to BASV53:
 
 ```
 :::
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
 ![](img/gitlab-ci-rna-seq.png)
+
+- Failed pipeline: no deployment as Building site failed.
+- Most recent pipeline, I modified `Dockerfile`, thus 3 steps.
+:::
+::::
+
+
+## Dockerfile
+
+
+:::: {.columns}
+::: {.column width="70%"}
+``` {.yaml filename="Dockerfile"}
+FROM rocker/r2u:22.04
+
+RUN  apt-get update && \
+  apt-get install -y \
+  curl netbase \
+  zip git \
+  libxml2-dev libcurl4-openssl-dev libmagick++-dev \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN install.r tidyverse rmarkdown biobase knitr V8 gt gtextras  ggimage ggrepel ggupset BiocManager && \
+  installBioc.r deseq2 apeglm
+
+# from https://quarto.org/docs/get-started/
+ARG QUARTO_VERSION="1.6.33"
+RUN curl -LO https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb && \
+    apt-get update -qq && apt-get -y install \
+    ./quarto-${QUARTO_VERSION}-linux-amd64.deb && rm quarto-${QUARTO_VERSION}-linux-amd64.deb \
+    && apt autoremove -y && apt clean -y && rm -rf /var/lib/apt/lists/*
+
+```
+:::
+::: {.column width="30%"}
+
+[`r2u`](https://eddelbuettel.github.io/r2u) is awesome, offering {{< fa brands r-project >}} packages as APT.
+
+- **CRAN** as Ubuntu binaries, no compilation
+- `{tidyverse}` install is < 10 sec
+
+by [Dirk Eddelbuettel](https://dirk.eddelbuettel.com/)
 :::
 ::::
 
