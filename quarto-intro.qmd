@@ -31,7 +31,7 @@ embed-resources: true
 - Learn about the different possibilities:
     + Documents and reports
     + Presentations
-        + This one, [rendered: {{< fa brands github >}} pages](), : rendered: [https://ginolhac.github.io/quarto-intro/](https://ginolhac.github.io/quarto-intro/)
+        + This one, [{{< fa brands github >}} code](https://github.com/ginolhac/quarto-intro/), : rendered: [https://ginolhac.github.io/quarto-intro/](https://ginolhac.github.io/quarto-intro/)
     + Websites and blogs
     + Dashboards
     + Books
@@ -54,13 +54,18 @@ embed-resources: true
 — _William Landau_ Developer of `{targets}`
 :::
 
+</br>
 
 ::: {.fragment}
 For a bioinformatician, pure programming is barely happening, we need reports/websites where [**content**]{.green} and formatting are disconnected 
 :::
 
+::: {.fragment}
+Even better to separate [**content**]{.green} and **rendering**, outsourced to continuous integration/development.
+:::
+
 ::: {.footer}
-Source: [`{targets}` user manual](https://books.ropensci.org/targets/literate-programming.html)
+Source: [{targets} user manual](https://books.ropensci.org/targets/literate-programming.html)
 :::
 
 
@@ -168,9 +173,7 @@ Extended Rmarkdown. Languages and **Integrated Development Environment** agnosti
 - Export a single (`.qmd`) document to various formats (PDF, HTML...)
 - Many [extensions](https://m.canouil.dev/quarto-extensions/extensions.html)
 - Text file that can (should) be tracked by a version control system (like {{< fa code-branch >}} [git](https://git-scm.com/))
-    + {{< fa brands gitlab >}} [UNI gitlab](https://gitlab.com/uniluxembourg/fstm), official place for collaborative work, or  {{< fa brands github >}} [GitHub](https://github.com)
-    
-![](img/unilu-gitlab.png){fig-align="center" height=}
+
 
 
 
@@ -245,6 +248,8 @@ Code to be interpreted
 
 - `knitr` for {{< fa brands r-project >}}
 - `jupyter` for {{< fa brands python >}}
+-  `QuartoNotebookRunner.jl` package for `julia`
+- native support for `Observable`
 - Outputs (tables/plots) are inserted below each
 :::
 
@@ -382,6 +387,118 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 ::::
 
 
+## YAML config file
+
+
+:::: {.columns}
+::: {.column width="40%"}
+- Mandatory name: `_quarto.yml`, at project root
+- Target of `quarto render`
+- To configure:
+    + Books
+    + Websites
+    + Manuscripts
+:::
+::: {.column width="60%" .fragment}
+``` {.yaml filename="_quarto.yml"}
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "!resources/"
+    - "!data/"
+
+execute:
+  freeze: auto  # re-render only when source changes
+
+website:
+  title: "bulk RNA-seq"
+  site-url: https://misb.pages.uni.lu/rna-seq
+  image: img/visualization.png
+  description: "Snakemake dependency graph"
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    background: light
+    logo: img/visualization.png
+    left:
+      - file: index.qmd
+        text: "{{< fa house >}}"
+      - file: slides.qmd
+        text: "{{< fa graduation-cap >}} Lectures"
+      - file: practicals.qmd
+        text: "{{< fa desktop >}} Practicals"
+      - file: setup.qmd
+        text: "{{< fa screwdriver-wrench >}} Setup tutorial"
+      - file: exams.qmd
+        text: "{{< fa graduation-cap >}} Exams"
+    right:
+      - file: about.qmd
+        text: "{{< fa question-circle >}} About"
+  page-footer:
+    left: |
+      All content licensed under a {{< fa brands creative-commons >}}
+      {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-nc >}} except for _source:_ statements.
+    center: "Copyright © [Université du Luxembourg](https://www.uni.lu/) 2024. All rights reserved."
+    right:
+      - icon: facebook
+        href: https://www.facebook.com/uni.lu
+      - icon: linkedin
+        href: https://www.linkedin.com/school/166650
+      - icon: instagram
+        href: https://www.instagram.com/uni.lu
+      - icon: youtube
+        href: https://www.youtube.com/user/luxuni
+    border: true
+
+format:
+  html:
+    page-layout: article
+    code-block-border-left: true
+    code-block-bg: true
+    code-copy: true
+    code-link: false # requires pkg downlit
+    theme:
+      light: cosmo
+      dark: [cosmo, theme-dark.scss]
+    fontsize: 1.2em
+    css: styles.css
+    toc: true
+    lang: en
+    date-format: long
+    highlight-style: atom-one
+```
+:::
+::::
+
+## Website example
+
+With previous `_quarto.yml` and some CSS tweaks. Grid listing
+
+![](img/rna-seq-www.png){fig-align="center"}
+
+## Websites
+
+:::: {.columns}
+::: {.column width="40%"}
+
+- Extensive use for teaching
+- Building and deployment via Continuous Integration (CI)
+    + Gitlab {{< fa brands gitlab >}}
+    + GitHub {{< fa brands github >}}
+- Automatic listing pages, search engine, navigation bar and smart caching
+- Demo using the [BASV53](https://basv53.uni.lu)
+    + Table listings
+
+:::
+::: {.column width="60%"}
+![](img/website-basv53.png){fig-align="center"}
+
+:::
+::::
+
+
 ## Books
 
 :::: {.columns}
@@ -398,28 +515,7 @@ $$G_{\mu v}=8 \pi G (T_{\mu v} + \rho _\Lambda \ g_{\mu v})$$
 ::::
 
 
-## Websites
-
-:::: {.columns}
-::: {.column width="40%"}
-
-- Extensive use for teaching
-    + Anthoula
-    + R. Krause
-- Building and deployment via Continuous Integration (CI)
-    + Gitlab {{< fa brands gitlab >}}
-    + GitHub {{< fa brands github >}}
-- Automatic listing pages, search engine, navigation bar and smart caching
-- Demo using the [BASV53](https://basv53.uni.lu)
-
-:::
-::: {.column width="60%"}
-![](img/website-basv53.png){fig-align="center"}
-
-:::
-::::
-
-## Dashboards, what we do
+## Dashboards
 
 - Nice alternative to `shiny` apps (using CI scheduled pipelines)
 - Demo using the [labbook timeline of bioinfo](https://uniluxembourg.gitlab.io/fstm/dlsm/bioinfo/labbook-dashboard/)
@@ -498,7 +594,7 @@ quarto add quarto-journals/plos
 
 ![](img/quarto-ext-journals.png){fig-align="center"}
 
-## Quarto Manuscripts, what services we offer
+## Quarto Manuscripts, example
 
 :::: {.columns}
 ::: {.column width="40%"}
@@ -536,7 +632,7 @@ PLoS PDF example:
 ::: {.column width="50%"}
 - We saw already some examples
     + PLoS format
-    + This unilu-theme
+    + This [unilu-theme](https://github.com/ginolhac/unilu-theme)
     + Pointer (press {{< kbd q >}})
 :::
 ::: {.column width="50%" .fragment}
@@ -773,6 +869,41 @@ by [Dirk Eddelbuettel](https://dirk.eddelbuettel.com/)
 :::
 ::::
 
+
+## Pre/Post render hooks
+
+
+:::: {.columns}
+::: {.column width="50%"}
+Tyler Morgan-Wall, author of [`rayshader`](https://www.rayshader.com/)
+
+- Replacing a _Wordpress_ website to **Quarto**
+
+``` {.yaml filename="_quarto.yml"}
+project:
+  type: website
+  pre-render: "ech Let the rendering begin!"
+  post-render:
+    - "cp -rv posts/images/. _site/posts/images/"
+    - "cp -rv posts/videos/. _site/posts/videos/"
+    - "Rscript transfer_site.R upload_site"
+```
+:::
+::: {.column width="50%"}
+- [Quarto, AI art of Getting Yout Life Back](https://www.youtube.com/watch?v=U8_Dc_ru8fg)
+
+{{< video https://www.youtube.com/watch?v=U8_Dc_ru8fg width="100%" height="350" >}}
+
+
+[Embed videos](https://quarto.org/docs/authoring/videos.html): 
+``` default
+{{< video https://www.youtube.com/watch?v=U8_Dc_ru8fg height="350" >}}
+```
+:::
+::::
+
+
+
 ## Positron in beta since June 2024
 
 ![](img/positron.png){fig-align="center"}
@@ -819,7 +950,9 @@ by [Dirk Eddelbuettel](https://dirk.eddelbuettel.com/)
 * Artwork by [Allison Horst](https://twitter.com/allison_horst)
 * Mickaël Canouil
 * Jenny Bryan
+
 :::
+</br>
 
 [Thank you for your attention!]{.thanks}
 ::::
