@@ -882,7 +882,7 @@ Tyler Morgan-Wall, author of [`rayshader`](https://www.rayshader.com/)
 ``` {.yaml filename="_quarto.yml"}
 project:
   type: website
-  pre-render: "ech Let the rendering begin!"
+  pre-render: "echp Let the rendering begin!"
   post-render:
     - "cp -rv posts/images/. _site/posts/images/"
     - "cp -rv posts/videos/. _site/posts/videos/"
@@ -894,12 +894,12 @@ project:
 
 {{< video https://www.youtube.com/watch?v=U8_Dc_ru8fg width="100%" height="350" >}}
 
-
+:::
 [Embed videos](https://quarto.org/docs/authoring/videos.html): 
-``` default
+
+``` {.default shortcodes="false" code-line-numbers="false"}
 {{< video https://www.youtube.com/watch?v=U8_Dc_ru8fg height="350" >}}
 ```
-:::
 ::::
 
 
