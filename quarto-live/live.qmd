@@ -102,6 +102,14 @@ With `{dplyr}` it would the equivalent: `filter`, `pull` and `mean`.
 
 **Solution:**
 
+Base R:
+
+``` r
+mean(subset(airquality, Month == 8)$Temp)
+```
+
+`dplyr`:
+
 ```r
 library(dplyr)
 filter(airquality, Month == 8) |> 
@@ -109,4 +117,5 @@ filter(airquality, Month == 8) |>
   mean()
 ```
 
+**83.96774**
 :::

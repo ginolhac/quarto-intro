@@ -138,7 +138,7 @@ This is some text in a **paragraph**
 - ![](https://images.computerhistory.org/revonline/images/500004391-03-01.jpg?w=200)
 ```
 
-![Linus and Tux](img/linus-tux.png){.fragment}
+![Two Tux and Linus](img/linus-tux.png){.fragment}
 
 ::::
 :::::
