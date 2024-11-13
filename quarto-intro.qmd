@@ -948,8 +948,13 @@ ffmpeg -ss 3  -i Screencast.mp4 -vf "fps=10,scale=640:-1:flags=lanczos" -gifflag
 
 ## Positron in beta since June 2024
 
-![](img/positron.png){fig-align="center"}
+![](img/positron.png){fig-align="center" height=750}
 
+
+![](https://github.com/posit-dev/ark/raw/main/doc/logo.png){.absolute height="150px" top="1em" right="1em"}
+
+- [Ark](https://github.com/posit-dev/ark) new R kernel written in Rust
+- [Data explorer](https://positron.posit.co/data-explorer.html) using [polars](https://pola.rs/) is great
 
 ## Before we stop
 
