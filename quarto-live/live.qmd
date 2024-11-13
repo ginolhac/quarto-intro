@@ -1,0 +1,112 @@
+---
+format: live-html
+engine: knitr
+---
+
+
+First install the extension with `quarto add r-wasm/quarto-live`
+
+For now we need to include a `knitr` hook.
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{webr}
+for (x in 1:5) {
+  print(x ** 2)
+}
+```
+
+
+## Plotting
+
+```{webr}
+library(ggplot2)
+ggplot(airquality, aes(x = Day, y = Ozone)) + 
+  geom_point() + 
+  facet_wrap(vars(Month))
+```
+
+For the exercise, might want to look at temperatures instead of ozone measurements.
+
+
+## Exercises
+
+```{webr}
+#| exercise: ex1
+#| caption: "Exercise 1: Fill in the missing number"
+1 + 2 + 3 + _
+```
+
+```{webr}
+#| exercise: ex1
+#| check: true
+if (.result == 10) {
+  list(message = "Great work!", correct = TRUE)
+} else {
+  list(message = "That's incorrect.", correct = FALSE)
+}
+```
+
+::: { .hint exercise="ex1" }
+
+You should make the expression sum to 10.
+
+:::
+
+::: { .solution exercise="ex1" }
+
+**Solution:**
+
+```r
+1 + 2 + 3 + 4
+```
+
+:::
+
+### Summarising by the mean
+
+Using the built-in dataset `airquality` (first 5 rows below):
+
+```{r}
+head(airquality, 5)
+```
+
+
+**Find the mean temperature for August**
+
+```{webr}
+#| exercise: ex2
+#| caption: "Exercise 2: Compute the mean temperature for August"
+__(airquality)
+```
+
+```{webr}
+#| exercise: ex2
+#| check: true
+if (.result == mean(subset(airquality, Month == 8)$Temp)) {
+  list(message = "Great work!", correct = TRUE)
+} else {
+  list(message = "That's incorrect.", correct = FALSE)
+}
+```
+
+::: { .hint exercise="ex2" }
+
+Several ways are available, with base R, a `subset` and then `mean` of the appropriate column works.
+
+With `{dplyr}` it would the equivalent: `filter`, `pull` and `mean`.
+
+:::
+
+::: { .solution exercise="ex2" }
+
+**Solution:**
+
+```r
+library(dplyr)
+filter(airquality, Month == 8) |> 
+  pull(Temp) |> 
+  mean()
+```
+
+:::

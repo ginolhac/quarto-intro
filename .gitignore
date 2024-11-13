@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 *Rproj
-/*.html
-/*_files/
+*.html
+*_files/
+quarto-live/_extensions/
 /dlsm-bioinfo/

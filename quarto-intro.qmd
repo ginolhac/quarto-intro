@@ -906,7 +906,7 @@ project:
 
 :::: {.columns}
 ::: {.column width="50%"}
-- [Introduction](https://r-wasm.github.io/quarto-live/)
+- [Official introduction](https://r-wasm.github.io/quarto-live/)
 - `quarto add r-wasm/quarto-live`
 - Chunk engine: `{webr}`
 - Neat for creating exercises
