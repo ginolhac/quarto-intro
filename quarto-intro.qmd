@@ -882,7 +882,7 @@ Tyler Morgan-Wall, author of [`rayshader`](https://www.rayshader.com/)
 ``` {.yaml filename="_quarto.yml"}
 project:
   type: website
-  pre-render: "echp Let the rendering begin!"
+  pre-render: "echo Let the rendering begin!"
   post-render:
     - "cp -rv posts/images/. _site/posts/images/"
     - "cp -rv posts/videos/. _site/posts/videos/"
@@ -902,6 +902,48 @@ project:
 ```
 ::::
 
+## Quarto Live
+
+:::: {.columns}
+::: {.column width="50%"}
+- [Introduction](https://r-wasm.github.io/quarto-live/)
+- `quarto add r-wasm/quarto-live`
+- Chunk engine: `{webr}`
+- Neat for creating exercises
+
+```` markdown
+---
+format: live-html
+engine: knitr
+---
+
+```{{webr}}
+for (x in 1:5) {
+  print(x ** 2)
+}
+```
+
+````
+
+::: {.callout-warning}
+## Warning
+This is a temporary fix for `knitr`:
+
+`{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}`
+:::
+
+:::
+::: {.column width="50%"}
+![](img/quarto-live-webr.gif)
+:::
+::::
+
+
+::: {.content-hidden}
+
+ffmpeg -ss 3  -i Screencast.mp4 -vf "fps=10,scale=640:-1:flags=lanczos" -gifflags -transdiff -y quarto-live-webr.gif
+
+:::
 
 
 ## Positron in beta since June 2024
@@ -942,7 +984,7 @@ project:
 * Anthoula Gaigneaux
 * Eric Koncina
 
-### Outside
+
 * Mine Cetinkaya-Rundel
 * Xie Yihuie
 * Hadley Wickham

@@ -10,7 +10,7 @@ authors:
       - id: dlsm
         number: number
         name: University of Luxembourg
-        department: FSLM
+        department: FSTM
         group: DLSM
         address: 6, Avenue du Swing
         city: Belvaux
