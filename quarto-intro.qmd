@@ -179,7 +179,9 @@ Extended Rmarkdown. Languages and **Integrated Development Environment** agnosti
 
 ## Quarto pipeline
 
-[![](img/lit_prog_horst_qmd_render_schema.png)]{fig-align="center"}
+![](img/lit_prog_horst_qmd_render_schema.png){fig-align="center"}
+
+
 
 - Recently, [native Julia engine](https://quarto.org/docs/computations/julia.html#using-the-julia-engine)
 
@@ -645,7 +647,7 @@ PLoS PDF example:
 :::: {.columns}
 ::: {.column width="50%"}
 - In [pre-release v1.6 Quarto](https://prerelease.quarto.org/docs/authoring/brand.html) using `_brand.yml`
-- Same config for all format
+- Same config for all formats
 ``` {.yaml filename="_brand.yml"}
 color:
   palette:
