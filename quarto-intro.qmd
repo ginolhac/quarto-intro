@@ -181,6 +181,19 @@ Extended Rmarkdown. Languages and **Integrated Development Environment** agnosti
 
 [![](img/lit_prog_horst_qmd_render_schema.png)]{fig-align="center"}
 
+- Recently, [native Julia engine](https://quarto.org/docs/computations/julia.html#using-the-julia-engine)
+
+```` markdown
+---
+title: "A julia engine notebook"
+engine: julia
+---
+
+```{julia}
+1 + 2
+```
+````
+
 ## Computation
 
 :::::{.columns}
@@ -687,7 +700,7 @@ Example:
 - For HTML files/website, those are **static** files.
 - Rendering could be done on **someone else computer** _aka_ the cloud.
 - CI/CD (Continuous Integration/Continuous Deployment) can help
-- But you must use `git` {{< fa brands git >}}, as you do anyway right?
+- But you must use `git`, as you do anyway right?
 - Two examples:
     + {{< fa brands github >}} GitHub Actions
     + {{< fa brands gitlab >}} Gitlab CI
@@ -709,7 +722,7 @@ Some icons from [flaticon.com](https://www.flaticon.com/free-icons/), credit to 
 ::: {.column width="50%"}
 - Lot of _abstract_ recipes
 - Convenient but obscure
-- [Quarto actions](https://github.com/quarto-dev/quarto-actions)
+- [Quarto actions repo](https://github.com/quarto-dev/quarto-actions)
 
 ``` {.yaml filename=".github/workflows/publish.yml"}
 on:
@@ -754,7 +767,7 @@ jobs:
 
 :::: {.columns}
 ::: {.column width="50%"}
-- More verbose, {{< fa brands docker >}} explicit
+- More verbose, {{< fa brands docker >}} explicit: own `Dockerfile`
 
 ``` {.yaml filename=".gitlab-ci.yml"}
 image: alpine:latest
