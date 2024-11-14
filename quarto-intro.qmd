@@ -189,7 +189,7 @@ title: "A julia engine notebook"
 engine: julia
 ---
 
-```{julia}
+```{{julia}}
 1 + 2
 ```
 ````
@@ -635,6 +635,40 @@ Demo HTML output
 ::: {.column width="60%" .fragment}
 PLoS PDF example:
 ![](dlsm-bioinfo/pdf-plos.png)
+:::
+::::
+
+
+## Branding
+
+
+:::: {.columns}
+::: {.column width="50%"}
+- In [pre-release v1.6 Quarto](https://prerelease.quarto.org/docs/authoring/brand.html) using `_brand.yml`
+- Same config for all format
+``` {.yaml filename="_brand.yml"}
+color:
+  palette:
+    dark-grey: "#222222"
+    blue: "#ddeaf1"
+  background: blue
+  foreground: dark-grey
+  primary: black
+
+logo: 
+  medium: logo.png
+
+typography:
+  fonts:
+    - family: Jura
+      source: google
+  base: Jura
+  headings: Jura
+```
+:::
+::: {.column width="50%"}
+![](img/branding1.png)
+![](img/branding2.png)
 :::
 ::::
 
